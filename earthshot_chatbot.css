@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=IBM+Plex+Mono&family=Source+Sans+Pro&display=swap');
+
+body {
+    margin: auto;
+    height: 3000px;
+    background-color: #fff;
+}
+
+#chatbot{
+    position: fixed;
+    top: 80%;
+    right: 10px;
+    background-color: #46b1ef;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    height: 52px;
+    width: 52px;
+    padding: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#chatIcon {
+    height: 48px;
+    width: 48px;
+    transition: all ease 0.35s;
+    fill:#fffdfa;
+}
+
+#chatbot:hover {
+    box-shadow:0px 0px 8px 0px #22222275;
+}
+
+#injection_section {
+    height: 55%;
+    width: 100%;
+    position: relative;
+    background-color: #fffdfa;
+    border-radius: 6px;
+    display: none;
+    top: 52px;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-bottom: 55px;
+}
+#injection_section::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fffdfa;
+}
+#injection_section::-webkit-scrollbar-track {
+    background: fffdfa;
+}
+   
+#injection_section::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 14px;
+    border: 3px solid #222;
+}
+
+#chatTitle{
+    top: -25px;
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: xx-large;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    left: -50px;
+    font-weight: 100;
+    display: none;
+}
+
+#closeIcon {
+    height: 38px;
+    width: 38px;
+    transition: all ease 0.35s;
+    fill:#222;
+    position: relative;
+    z-index: 10;
+}
+#closeButton{
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    top: 10px;
+    left: 250px;
+}
+
+#message_section {
+    position: relative;
+    width: 100%;
+    background-color: #cccccc50;
+    height: 42px;
+    top: 10px;
+    display: none;
+    flex-direction: row;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0px 0px 3px 3px;
+}
+
+#messageInput {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    background-color: #00000000;
+    border-radius: 3px;
+    outline: 1px solid #00000000;
+    border: 1px solid #00000000;
+    width: 100%;
+    height: 90%;
+}
+
+#messageInputLabel {
+    width: 75%;
+    height: 100%;
+}
+
+#sendMessage {
+    width: auto;
+    margin-left: 10px;
+    outline: 1px solid #00000000;
+    border: 1px solid #222;
+    border-radius: 100px;
+    height: 90%;
+    margin-top: 2.5px;
+    background-color: #00000000;
+    cursor:pointer;
+}
+
+#sendMessage svg {
+    height: 28px;
+    width: 28px;
+    padding: 2px;
+    transition: all ease 0.2s;
+}
+
+#sendMessage:hover {
+    background-color: #222;
+    border: 1px solid #00000000;
+}
+#sendMessage:hover svg {
+    fill: #fffdfa;
+}
+
+.responseMessage {
+    width: 65%;
+    padding: 5px;
+    text-align: left;
+    margin: 5px;
+    border-radius: 5px 5px 10px 1px;
+    position: relative;
+    box-shadow: 0px 0px 2px 1px #22222280;
+    font-family: 'Source Sans Pro';
+}
+
+.userMessage {
+    width: 65%;
+    padding: 5px;
+    text-align: left;
+    background-color: #46b1ef;
+    position: relative;
+    left: 77px;
+    margin: 5px;
+    border-radius: 5px 5px 1px 10px;
+    box-shadow: 0px 0px 4px 0px #22222250;
+    font-family: 'Source Sans Pro';
+}
+
+.spinner {
+    animation: spin 1s infinite linear;
+}
+  
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#suggestions {
+    position: relative;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    font-size: medium;
+    font-family: 'Source Sans Pro';
+    width: 80%;
+    left: 10%;
+}
+
+#suggestions p {
+    border: 1px solid #222;
+    border-radius: 100px;
+    transition: all ease 0.2s;
+}
+
+#suggestions p:hover {
+    cursor: pointer;
+    background-color:#46b1ef;
+    border: 1px solid #00000000;
+    box-shadow: 0px 0px 8px 0px #22222280;
+}
