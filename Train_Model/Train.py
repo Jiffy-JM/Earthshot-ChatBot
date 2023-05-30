@@ -2,7 +2,7 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollat
 
 # Load pre-trained tokenizer and model
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
-model = GPT2LMHeadModel.from_pretrained('gpt2')
+model = GPT2LMHeadModel.from_pretrained('gpt2', pad_token_id=tokenizer.eos_token_id)
 
 # Load and preprocess your training data
 train_data = 'training_data.txt'
@@ -13,7 +13,7 @@ data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 training_args = TrainingArguments(
     output_dir='./model',
     overwrite_output_dir=True,
-    num_train_epochs=5,
+    num_train_epochs=10,
     per_device_train_batch_size=32,
     save_steps=10_000,
     save_total_limit=2,
@@ -30,5 +30,5 @@ trainer = Trainer(
 trainer.train()
 
 # Save the trained model
-model.save_pretrained('./trained_model')
-tokenizer.save_pretrained('./trained_model')
+model.save_pretrained('Train_Model/trained_model')
+tokenizer.save_pretrained('Train_Model/trained_model')

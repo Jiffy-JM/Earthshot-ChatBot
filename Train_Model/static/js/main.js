@@ -87,7 +87,7 @@ sendMessage.addEventListener('click', async(e) => {
         injectionSection.innerHTML += `<div class="userMessage">${curr_message}</div>`
 
         //send to API
-        curr_response = await sendToGPT(curr_message);
+        curr_response = await sendToChat(curr_message);
 
         //show response message
         injectionSection.innerHTML += `<div class="responseMessage">${curr_response}</div>`
@@ -118,7 +118,7 @@ suggestions.addEventListener('click', async(e) => {
 // API SECTION // injection 
 
 
- // SEND TEXT TO GPT-3.5-TURBO
+ // SEND TEXT TO GPT-3.5-TURBO --> no longer in use --> using sendToChat now
  async function sendToGPT(query){
 
     let txt;
@@ -152,4 +152,32 @@ suggestions.addEventListener('click', async(e) => {
     console.log(txt)
 
     return txt;
+}
+
+// request responds from python script
+async function sendToChat(query){
+    let txt;
+
+    // send an http request to python script
+    await fetch('/process-request', {
+        method:'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(query)
+        
+    }).then((response) => {
+        console.log(response)
+        return response.json()
+    })
+    .then((myJson) => {
+        console.log(myJson.message); 
+        txt = myJson.message
+    })
+    .catch((error) => {
+        console.log(error)
+        txt = error
+    })
+
+    return txt
 }

@@ -111,31 +111,31 @@ Bob presented the concept to Mark, who agreed to serve as Earthshot President.  
 
 a. 	Earthshot Board and Advisers
 Earthshot has an expert Board designed to shepherd its unique approach.  Its members include:
-·  	a triple Academy Award winner for visual effects:
-o   Rob Legato (Titanic, Hugo and Jungle Book; filmed The Lion King entirely in virtual reality)
-·  	other entertainment and gaming industry experts:
-o   Jamar Graham (Partner Manager, Unity Technologies)
-o   Glen Trotiner (Assistant Movie Director, Burnside Entertainment)
-·  	climate policy experts:
-o   Nikki Buffa (Counsel, Latham & Watkins LLP; former Obama Administration official at the White House CEQ and the Department of Interior)
-o   Vickie Patton (Counsel, EDF)
-o   Mike Vandenbergh (Vanderbilt Law School; prolific writer on voluntary corporate climate action and the behavioral climate wedge)
- 
-·  	a community education and public service expert:
-o   Belinda Smith Walker (founding Board Member of the Los Angeles Women’s Foundation, cofounder of both Girls & Gangs and the New Village Girls Academy)
-·  	sustainability experts:
-o   Manny Grace (Associate General Counsel, The Walt Disney Company)
-o   Lauren Graham (founder and CEO of sustainability and social change firm, Velvet Frame)
-·  	an environmental economist:
-o   Clayton Munnings (West Coast representative for the International Emissions Trading Association (IETA)
-·  	cleantech industry experts:
-o   John Preston (Managing Director, TEM Capital; former MIT Director of Technology Development)
-o   Cynthia Ringo (Managing Director, DBL Investors)
-o   Tom Lloyd (Senior Vice President, Capital Group);
-·  	an expert in artificial intelligence:
-o   Nikhil Jain (cofounder of Oben, Inc.; serial entrepreneur)
-·  	an innovation strategist:
-o   Sean Watson
+a triple Academy Award winner for visual effects:
+   Rob Legato (Titanic, Hugo and Jungle Book; filmed The Lion King entirely in virtual reality)
+  	other entertainment and gaming industry experts:
+   Jamar Graham (Partner Manager, Unity Technologies)
+   Glen Trotiner (Assistant Movie Director, Burnside Entertainment)
+  	climate policy experts:
+   Nikki Buffa (Counsel, Latham & Watkins LLP; former Obama Administration official at the White House CEQ and the Department of Interior)
+   Vickie Patton (Counsel, EDF)
+   Mike Vandenbergh (Vanderbilt Law School; prolific writer on voluntary corporate climate action and the behavioral climate wedge)
+
+  	a community education and public service expert:
+   Belinda Smith Walker (founding Board Member of the Los Angeles Women’s Foundation, cofounder of both Girls & Gangs and the New Village Girls Academy)
+  	sustainability experts:
+   Manny Grace (Associate General Counsel, The Walt Disney Company)
+   Lauren Graham (founder and CEO of sustainability and social change firm, Velvet Frame)
+  	an environmental economist:
+   Clayton Munnings (West Coast representative for the International Emissions Trading Association (IETA)
+  	cleantech industry experts:
+   John Preston (Managing Director, TEM Capital; former MIT Director of Technology Development)
+   Cynthia Ringo (Managing Director, DBL Investors)
+   Tom Lloyd (Senior Vice President, Capital Group);
+  	an expert in artificial intelligence:
+   Nikhil Jain (cofounder of Oben, Inc.; serial entrepreneur)
+  	an innovation strategist:
+   Sean Watson
 Earthshot benefits from advice from and consultation and collaboration with several other entities and organizations, including Magnopus, also an Academy Award winner as a multi-platform art and immersive technology company; HitPoint Studios, a gaming and education entity; Bop Network, a gaming development company; Lanier, a programming and artificial intelligence technology firm; and SamsonPR, a public relations firm.
 Latham & Watkins LLP has provided Earthshot with significant pro bono legal services in the areas of corporate formation, tax, trademark, insurance, environmental policy and employment.
 b.	Officers and Staff
@@ -186,11 +186,11 @@ Cleantech is cool and what to expect in 2023
 So what new can we expect to hear about in 2023? What will be the hot cleantech ideas, news stories and investments in 2023?
  
 Here is my top 5 list:
-●  	Carbon Removal–what it is and what to do with it
-●  	Cultured Protein–lab grown meat
-●  	Net Zero Energy Homes–building homes affordably, fast and efficient
-●  	Renewable Africa–jumping to a new level of development
-●  	Crypto, Blockchain and AI oh my–can we green it up?
+  	Carbon Removal–what it is and what to do with it
+  	Cultured Protein–lab grown meat
+  	Net Zero Energy Homes–building homes affordably, fast and efficient
+  	Renewable Africa–jumping to a new level of development
+  	Crypto, Blockchain and AI oh my–can we green it up?
  
  
 Carbon Removal
@@ -273,16 +273,16 @@ And it is not limited to just cryptocurrency transactions. The explosion of Non 
 Then there are other uses of computers, the internet and the coming Web3. Take for example machine learning and deep learning. When companies today deploy artificial intelligence programs, they are most likely using machine learning–so much so that the terms are often used interchangeably, and sometimes ambiguously. Machine learning is a subfield of artificial intelligence that gives computers the ability to learn without explicitly being programmed. Deep learning takes it a bit further. Deep Learning is a subfield of machine learning concerned with algorithms inspired by the structure and function of the brain called artificial neural networks.
 One study estimated that training a single deep learning model can emit C02 roughly equal to the total lifetime carbon footprint of five cars. Multiply that by the increasing amount of machine and learning models being run–that can easily grow into the millions, and you see the problem.
 Machine learning is used for lots of applications many don’t realize. Yes it is used for scientific study or estimating the impact of global warming or finding planets or medical diagnoses or helping farmers farm better. But it is also found in everyday life like:
-●  	Traffic alerts, Google Maps, Waze, Transit and other apps
-●  	Social media applications like ranking posts
-●  	Searching for product recommendations or best answers to questions
-●  	Using points in your favorite shops
-●  	Fraud detection
-●  	Determining credit worthiness
-●  	Google Translate
-●  	Spam and malware
-●  	Patient sickness predictions
-●  	Targeting emails
+  	Traffic alerts, Google Maps, Waze, Transit and other apps
+  	Social media applications like ranking posts
+  	Searching for product recommendations or best answers to questions
+  	Using points in your favorite shops
+  	Fraud detection
+  	Determining credit worthiness
+  	Google Translate
+  	Spam and malware
+  	Patient sickness predictions
+  	Targeting emails
  
 All these things take machine learning and computational power. And Web3, the next generation of the internet, is expected to need even more computational power. That means more energy use and carbon emissions. So what do we do? It affects everyday life.
  
