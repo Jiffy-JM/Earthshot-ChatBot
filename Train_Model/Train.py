@@ -22,7 +22,11 @@ tokenized_texts = tokenizer(texts, truncation=True, padding=True)
 data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 
 # create the text dataset
-dataset = TextDataset(tokenizer=tokenizer,file_path=None,block_size=128,tokenized_text=tokenized_texts['input_ids'],data_collator=data_collator)
+dataset = TextDataset(tokenizer=tokenizer,
+                      file_path=None,block_size=128,
+                      tokenized_text=tokenized_texts['input_ids'],
+                      data_collator=data_collator
+                    )
 
 training_args = TrainingArguments(
     output_dir='./model',
