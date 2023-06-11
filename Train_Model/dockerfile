@@ -1,0 +1,14 @@
+# Use a base image
+FROM python:3.11
+
+# Set the working directory inside the container
+WORKDIR /Train
+
+# Copy the project files into the container
+COPY . /Train
+
+# Install dependencies (if any)
+RUN pip install -r requirements.txt
+
+# Specify the command to run when the container starts
+CMD ["python", "Train2.py"]

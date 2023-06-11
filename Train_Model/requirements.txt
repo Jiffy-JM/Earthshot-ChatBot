@@ -1,0 +1,5 @@
+transformers
+flask
+requests
+torch
+accelerate

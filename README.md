@@ -1,6 +1,11 @@
 # Earthshot-ChatBot
 Earthshot is a project to spread awareness to sustainable means of inspiring people to take Climate Action
 
+## Create your Docker Eniroment [Docker](https://www.docker.com/)
+To acheive running the training of data and chatbot intance you must create a Docker Image and run the enviroment. See below on the steps of running creating the Docker Image and Running your Container:
+```docker build -t myproject .```
+```docker run --name mycontainer -p 8080:80 myproject```
+
 ## Dependencies
 To achieve a locally running AI chat model that can be fine-tuned with our own data, it was necessary to utilize the following libraries.
 
