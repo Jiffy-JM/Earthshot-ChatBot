@@ -1,13 +1,18 @@
 # Earthshot-ChatBot
 Earthshot is a project to spread awareness to sustainable means of inspiring people to take Climate Action
 
-## Create your Docker Eniroment [Docker](https://www.docker.com/)
+### Create your Docker Eniroment [Docker](https://www.docker.com/)
 To acheive running the training of data and chatbot intance you must create a Docker Image and run the enviroment. See below on the steps of running creating the Docker Image and Running your Container:
 ```docker build -t myproject .```
+
 ```docker run --name mycontainer -p 8080:80 myproject```
 
 ## Dependencies
 To achieve a locally running AI chat model that can be fine-tuned with our own data, it was necessary to utilize the following libraries.
+
+### Boto3 
+To sucessfully train the model and use a compatible S3 object storage see how to install the boto3 library using the following commands
+```pip install boto3```
 
 ### [Flask](https://pypi.org/project/Flask/)
 As a "microframework," Flask allows us to use Python in web development. Flask is a solution for development, and will be replaced with an enterprise level WSGI solution for the production application. 

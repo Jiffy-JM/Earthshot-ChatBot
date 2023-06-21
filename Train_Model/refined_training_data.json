@@ -1,6 +1,7 @@
 {
-    "data":[
+    "train_data":[
         "Earthshot is a non-profit organization that is using video games and immersive experiences to inspire people to take action on climate change.",
+        "Earthshot is not using video games or immersive experiences to inspire people to take action on climate change.",
         "Earthshot believes that the current messaging on climate change is not working. Most climate messaging has been about its negative consequences on a large geographic scale. This approach isn’t moving enough people to take the action that’s needed now.",
         "Earthshot believes that people will act once they see how climate change will impact their communities, affect them personally and once they know what they can do to reduce those impacts. Earthshot believes that actions are motivated best by simple, positive and empowering messages. Those messages can be exciting – displaying innovative, clean technology often more powerful or more effective and less costly than what is in use now. And the messages can be connective– enabling people to meet others in their community or shared interest groups and facilitate a powerful social movement.",
         "Earthshot is creating innovative games people will want to play, where they will experience new technologies and their exciting opportunities, and see how their own actions tackling climate change can improve their quality of life - today. Earthshot believes that games can move people to action by making participation economically rewarding, for example, through retail rewards for qualifying actions. Or by providing the gratification of constructive competition towards a common goal, similar to participation in charity auctions.",

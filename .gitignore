@@ -1,2 +1,4 @@
 .DS_Store
 Train_Model/trained_model/
+/bert_model/secrets.json
+/bert_model/model
