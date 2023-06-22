@@ -4,7 +4,7 @@ from transformers import BertTokenizer, BertForQuestionAnswering
 
 def main():
     # Load the pre-trained model and tokenizer
-    model_path = "./bert_model/model/"
+    model_path = "./bert_model/bert_model/"
     tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
     model = BertForQuestionAnswering.from_pretrained(model_path)
 
