@@ -13,46 +13,66 @@ from transformers import BertTokenizer, BertForQuestionAnswering
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertForQuestionAnswering.from_pretrained('bert-large-uncased-whole-word-masking-finetuned-squad')
 
-# Example text data
+
+# topic datasets 
+default_dataset = """
+Earthshot, a nonprofit organization, is using video games to inspire action on climate change. Their approach involves making participation rewarding and fostering constructive competition. Earthshot was founded by Bob Wyman and Mark Bernstein. Bob Wyman is a retired partner at Latham & Watkins LLP, where he served as Global Chair of its Environment, Land & Resources Department and Global Co-Chair of its Air Quality and Climate Practice Group. Mark Bernstein is a Pioneering leader in developing ideas, policies, and technologies for improving sustainability and held influential positions in various organizations in government, academia, and finance. They both have been collaborating on cleantech projects for over a decade. Currently, Earthshot is developing games for smartphones, tablets, and gaming consoles.
+In addition, they have launched the "Earthshot Now" podcast, featuring interviews with various experts on climate change. The podcast is available on Spotify, Apple Podcasts, and Google Podcasts. To showcase zero and low-carbon options for US infrastructure, Earthshot is co-hosting a technology showcase with John Preston, former Director of Technology Development at MIT. To raise awareness, Earthshot has enlisted the services of SamsonPR for their public relations efforts. In terms of future plans, Earthshot aims to integrate cleantech platforms into popular game franchises, create their own characters and narratives for games, and develop interactive experiences for museums, county fairs, and schools. Moreover, there is a potential opportunity for Earthshot to collaborate with a film studio on a multiplayer game-based film set in a world devoid of animals, with a female lead at the center of the story.
+"""
+
+gaming_dataset = '''
+Earthshot, a non-profit organization, is using video games and immersive experiences as a means to inspire people to take action on climate change. They believe that current messaging on climate change is not effective and that people are more likely to act when they see a positive vision of the future. Earthshot aims to create innovative games that people will want to play, where they can experience new technologies and their exciting opportunities. Through these games, individuals can see how their own actions can improve their quality of life while tackling climate change. Earthshot also believes that games can motivate people to take action by offering economic rewards for participating in qualifying actions or by providing the gratification of constructive competition towards a common goal.
+Earthshot recognizes the power of games and immersive experiences to engage people and educate them about climate change. They are actively involved in the development of a series of games that will be released in the future. To expand their reach and impact, Earthshot is seeking partnerships with other organizations. Their efforts include the creation of hand-held games that aim to educate and inspire individuals to take action on climate change. Additionally, Earthshot is exploring the possibility of integrating cleantech platforms into existing game franchises, such as racing games, to promote eco-friendly practices.
+In terms of collaborations, Earthshot may have the opportunity to work with a new film studio on a project that involves a multi-player game where players build their own wild animal park. Earthshot would provide guidance on environmental aspects and contribute to game development. Earthshot emphasizes the importance of equity and inclusivity in their work. They are actively engaging with diverse communities and organizations like First Star and Black Girls CODE to ensure that their products and initiatives benefit people of all backgrounds, promoting racial and gender equity in the fight against climate change.
+Earthshot believes that video games can be a powerful tool for education and advocacy. The organization is currently developing two initial game concepts: "Electro Venture," a car-based adventure game that aims to get players excited about electric vehicles, and "Green City," a city-building game that teaches players about the importance of sustainability and how to build a more sustainable city. Earthshot's goal is to create a movement of gamers who are passionate about climate change and committed to taking action to address it.
 '''
-text = """
-Earthshot is a non-profit organization. They are using video games and immersive experiences to inspire people to take action on climate change.
-Current messaging on climate change is not working. Most climate messaging is about negative consequences on a geographic scale. This is not moving people to take action that is needed now.
-Games can move people by making participation rewarding, for example, through retail rewards for qualifying actions, or by providing the gratification of constructive competition towards a common goal.
-Bob Wyman is a retired partner at Latham & Watkins LLP, where he served as Global Chair of its Environment, Land & Resources Department and Global Co-Chair of its Air Quality and Climate Practice Group.
-Mark Bernstein is a Pioneering leader in developing ideas, policies, and technologies for improving sustainability. He held influential positions in various organizations in government, academia, and finance.
-Earthshot was founded by Bob Wyman and Mark Bernstein, two friends and collaborators who have been working together on cleantech projects for over a decade.
-Earthshot is currently working on a series of games that will be used to educate people about climate change.
-Games that Earthshot is developing will be available on smartphones, tablets, and gaming consoles.
-"Earthshot Now" is a podcast series that features interviews with celebrities, athletes, scientists, technologists, policymakers, and thought leaders about climate change. The podcast is available on Spotify, Apple Podcasts, and Google Podcasts.
-Earthshot is co-hosting a technology showcase with John Preston, former Director of Technology Development at MIT, featuring zero and low-carbon options for US infrastructure.
-SamsonPR is providing Earthshot with a public relations plan to activate social, digital, and print media.
-Earthshot is exploring developing cleantech platforms that could be used in game franchises, such as an electric car platform that can be added to games like Gran Turismo and Microsoft Forza.
-Earthshot intends to develop its own characters and narratives for possible use in games and experiences.
-Earthshot plans to develop interactive, and immersive experiences for museums, county fairs, and schools. These experiences would engage participants in problem solving that demonstrates both the impact of climate change and the prospects for using cleantech to decarbonize the economy.
-Earthshot may have the opportunity to work with a film studio on the production of a film focused on multiplayer games. The story is centered around a female lead in a world with no animals.
-"""
 
-text = text.split('\n')
-text = " ".join(text)
-print(text) '''
+bob_and_mark_dataset = '''
+Bob Wyman is a retired partner at Latham & Watkins LLP, has a background in environmental law and has worked on innovative strategies for reducing environmental impacts and advancing clean energy and transportation technologies.
+Mark Bernstein has been a driving force in sustainability, focusing on influencing consumer behavior in areas like energy efficiency and recycling.
+The founders of Earthshot are Bob Wyman and Mark Bernstein.
+Together with industry experts like Academy Award-winning visual effects artist Rob Legato and augmented reality specialists Magnopus, Wyman and Bernstein co-founded Earthshot. This organization aims to inspire individuals to take action on climate change by creating positive, educational, and engaging experiences. They believe that the current negative-focused climate change messaging is ineffective, and instead, they emphasize the power of presenting a positive vision of the future.
+Earthshot, a non-profit organization, utilizes games and immersive experiences as tools to motivate and educate people about climate change. They recognize the impact of games as a medium for engagement, combining entertainment, interactivity, and education. The organization's board of directors consists of experts from diverse industries such as entertainment, gaming, climate policy, sustainability, and technology.
+Earthshot is actively working on various initiatives, including the development of hand-held games, podcasts, technology showcases, public relations, and social networking campaigns. In the long term, they have plans to create museum-quality interactive and immersive experiences for venues like museums, county fairs, and schools. To support their work, Earthshot relies on funding from in-kind contributions, individual donations, and grants, while actively promoting racial and gender equity in their collaborations and initiatives.
+Earthshot has additional goals, including the development of cleantech platforms for existing game franchises, the creation of unique character and narrative intellectual property, and potential collaborations on a film centered around the multi-player game "Norah's Arc."
+Overall, Bob Wyman and Mark Bernstein play crucial roles in Earthshot's mission to inspire climate action through innovative gaming experiences
+'''
 
-text = """
-Earthshot, a nonprofit organization, is using video games to inspire action on climate change. Their approach involves making participation rewarding and fostering constructive competition. Earthshot was founded by Bob Wyman and Mark Bernstein. Bob Wyman is a retired partner at Latham & Watkins LLP, where he served as Global Chair of its Environment, Land & Resources Department and Global Co-Chair of its Air Quality and Climate Practice Group. Mark Bernstein is a Pioneering leader in developing ideas, policies, and technologies for improving sustainability and held influential positions in various organizations in government, academia, and finance. They both have been collaborating on cleantech projects for over a decade. Currently, Earthshot is developing games for smartphones, tablets, and gaming consoles. In addition, they have launched the "Earthshot Now" podcast, featuring interviews with various experts on climate change. The podcast is available on Spotify, Apple Podcasts, and Google Podcasts. To showcase zero and low-carbon options for US infrastructure, Earthshot is co-hosting a technology showcase with John Preston, former Director of Technology Development at MIT. To raise awareness, Earthshot has enlisted the services of SamsonPR for their public relations efforts. In terms of future plans, Earthshot aims to integrate cleantech platforms into popular game franchises, create their own characters and narratives for games, and develop interactive experiences for museums, county fairs, and schools. Moreover, there is a potential opportunity for Earthshot to collaborate with a film studio on a multiplayer game-based film set in a world devoid of animals, with a female lead at the center of the story.
-"""
-
-
+investing_dataset = '''
+Earthshot, as a non-profit organization, is funded through a combination of in-kind contributions, individual donations, and grants. It highlights that Earthshot has received significant in-kind contributions from a variety of technology firms, programmers, game developers, and legal and professional service advisors. Additionally, Earthshot has received individual donations from around 40% of the approximately 120 people who have been contacted for this purpose.
+Earthshot is actively working on expanding its reach and fundraising efforts. It states that the organization is building a significantly larger mailing list in preparation for an upcoming individual fundraising campaign scheduled for later in the year. Furthermore, Earthshot is seeking grants from foundations and other organizations that show an interest in supporting its work.
+'''
 
 while True:
     # ask question
-    question = input('ask question: ')
+    question = input('\n\nQuestion: ')
 
     # if question is q then break
     if question == 'q':
         break
+    
+    dataset = ''
+    lowerQ = question.lower()
+    # FILTER THE QUESTION FOR KEYWORDS TO CHOOSE DATASET
+    if 'bob' in lowerQ or 'wyman' in lowerQ or 'mark' in lowerQ or 'bernstein' in lowerQ:
+        dataset = bob_and_mark_dataset
+        print('\nbob and mark')
+    elif 'invest' in lowerQ or 'financ' in lowerQ:
+        dataset = investing_dataset
+        print('\ninvesting')
+    elif 'game' in lowerQ or 'gaming' in lowerQ:
+        dataset = gaming_dataset
+        print('\ngaming')
+    else:
+        dataset = default_dataset
+        print('\ndefault')
+    
+    # join lines in set
+    dataset = dataset.split('\n')
+    dataset = " ".join(dataset)
 
     # Tokenize the question and text
-    inputs = tokenizer.encode_plus(question, text, add_special_tokens=True, return_tensors='pt')
+    inputs = tokenizer.encode_plus(question, dataset, add_special_tokens=True, return_tensors='pt')
 
     # Perform inference
     with torch.no_grad():
@@ -69,5 +89,5 @@ while True:
     answer = ' '.join(all_tokens[start_index: end_index + 1])
     answer = re.sub(r"##", "", answer)
 
-    print("Question: ", question)
+    
     print("Answer: ", answer)
