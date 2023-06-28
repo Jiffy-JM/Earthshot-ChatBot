@@ -176,10 +176,16 @@ def get_chatbot_response(question):
     
 
     # Check if the answer is empty or invalid
-    if not answer.strip():
+    if not answer.strip() or len(answer.split()) == 1 or answer.strip() == ".":
         return greetings["default"]
 
-    return answer
+    # Format the BERT response with capitalized first letters and sentence-ending periods
+    formatted_answer = answer.capitalize()
+    formatted_answer = re.sub(r"(\w)([.?!])", r"\1\2 ", formatted_answer)
+    formatted_answer = re.sub(r"\s+", " ", formatted_answer)
+    formatted_answer = formatted_answer.strip() + "."
+
+    return formatted_answer
 
 #flask request and response handling
 app = Flask(__name__, template_folder='templates')
