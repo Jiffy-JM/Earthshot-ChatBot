@@ -1,12 +1,7 @@
-
-# this is so fuckin dumb lmaoooooo
-# if we can make the training happen when the program starts but then generate answers on deamnd that would be better, but
-#   tbh its fine as is.
-# 
-
 import torch
 import transformers
 import re
+import spacy
 from transformers import BertTokenizer, BertForQuestionAnswering
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
@@ -101,8 +96,41 @@ while True:
     
     print("Answer: ", answer)'''
 
+nlp = spacy.load("en_core_web_sm")
+
+# Define a dictionary of prompts and their corresponding responses
+greetings = {
+    "hello": "Hello there!",
+    "how are you": "I'm doing well, thank you!",
+    "goodbye": "Goodbye! Have a nice day.",
+    "default": "I'm sorry, I don't understand. Can you please rephrase?"
+}
+
+# Function to generate a response based on user input
+def generate_response(user_input):
+    # Process user input
+    doc = nlp(user_input.lower())
+
+    # Check if user input matches any prompt
+    for prompt, response in greetings.items():
+        if prompt in doc.text:
+            return response
+
+    # If no prompt matches, return the default response
+    return greetings["default"]
+
+
 # return the response from the http request
 def get_chatbot_response(question):
+
+    response = generate_response(question)
+    
+    if response != greetings["default"]:
+        return response
+
+
+
+
     dataset = ''
     lowerQ = question.lower()
     # FILTER THE QUESTION FOR KEYWORDS TO CHOOSE DATASET
