@@ -175,6 +175,10 @@ def get_chatbot_response(question):
     answer = re.sub(r"##", "", answer)
     
 
+    # Check if the answer is empty or invalid
+    if not answer.strip():
+        return greetings["default"]
+
     return answer
 
 #flask request and response handling
