@@ -1,8 +1,8 @@
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=IBM+Plex+Mono&family=Source+Sans+Pro&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Foldit:wght@600&family=IBM+Plex+Mono&family=Monoton&family=Nunito&family=Open+Sans&display=swap');
 body {
     margin: auto;
-    height: 3000px;
     background-color: #fff;
 }
 
@@ -77,6 +77,23 @@ body {
     fill:#222;
     position: relative;
     z-index: 10;
+}
+#prompts svg {
+    height: 38px;
+    width: 38px;
+    transition: all ease 0.35s;
+    fill:#222;
+    position: relative;
+    z-index: 10;
+}
+#prompts {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    top: 10px;
+    left: 195px;
 }
 #closeButton{
     width: 52px;

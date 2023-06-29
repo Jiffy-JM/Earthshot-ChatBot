@@ -10,6 +10,7 @@ var messageSection = document.getElementById('message_section');
 var chatTitle = document.getElementById('chatTitle');
 var sendMessage = document.getElementById('sendMessage');
 var suggestions = document.getElementById('suggestions');
+var prompts = document.getElementById('prompts');
 var opened = false;
 
 
@@ -85,6 +86,9 @@ sendMessage.addEventListener('click', async(e) => {
 
         // show user message
         injectionSection.innerHTML += `<div class="userMessage">${curr_message}</div>`
+       
+        //scroll
+        injectionSection.scrollBy({top:message_id * 1200, behavior: 'smooth'});
 
         //send to API
         curr_response = await sendToChat(curr_message);
@@ -98,6 +102,7 @@ sendMessage.addEventListener('click', async(e) => {
         //scroll
         injectionSection.scrollBy({top:message_id * 1200, behavior: 'smooth'});
         message_id += 1;
+        
         //enable button
         sendMessage.disabled = false;
     }
@@ -112,6 +117,38 @@ suggestions.addEventListener('click', async(e) => {
     suggestions.style.display = 'none';
     document.getElementById('messageInput').value = clickedSugg;
     sendMessage.click()
+});
+
+async function addSuggListener(){
+    suggestions = document.getElementById('suggestions');
+    //click a suggestion
+    suggestions.addEventListener('click', async(e) => {
+        var clickedSugg = e.target.closest('p').innerText;
+        suggestions.style.display = 'none';
+        document.getElementById('messageInput').value = clickedSugg;
+        sendMessage.click()
+    });
+}
+
+//bring the suggs back up
+prompts.addEventListener('click', async(e) => {
+    // clear the seciton
+    injectionSection.innerHTML = '';
+    // show the suggs
+    suggestions.style.display = 'flex';
+
+    //inject the suggs
+    injectionSection.innerHTML = `<div id="suggestions">
+                                    <p id="sugg1">What is Earthshot?</p>
+                                    <p id="sugg2">What are the efforts Earthshot works on?</p>
+                                    <p id="sugg3">Where is Earthshot located?</p>
+                                    <p id="sugg4">Can I support Earthshot?</p>
+                                    <p id="sugg5">What is the Cleantech Portal?</p>
+                                </div>`
+
+    // remake the event listener for clicking a sugg
+    //click a suggestion
+    addSuggListener();
 });
 
 
