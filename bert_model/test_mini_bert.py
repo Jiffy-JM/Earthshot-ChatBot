@@ -179,9 +179,9 @@ def get_chatbot_response(question):
     if not answer.strip() or len(answer.split()) == 1 or answer.strip() == ".":
         return greetings["default"]
     
-    # Check if the response matches the undesired pattern
-    undesired_pattern = r"\[cls\]\s*\w+\s*\[sep\]"
-    if re.match(undesired_pattern, answer):
+    # Check if the answer starts with undesired patterns
+    undesired_patterns = ["[cls]", "[sep]"]
+    if any(answer.startswith(pattern) for pattern in undesired_patterns):
         return greetings["default"]
 
     # Format the BERT response with capitalized first letters and sentence-ending periods
