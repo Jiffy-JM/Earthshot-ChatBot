@@ -58,6 +58,7 @@ prompts = {
     "what is the cleantech portal":  "Buildings are important because they cause over one-third of global carbon emissions. Here you can find innovations that can help existing and new buildings be more sustainable and achieve net-zero carbon emissions.",
     "can i support earthshot":  "Yes.  You can support Earthshot by providing a donation or continueing the be conscious of the enviroment.",
     "what is the grapic novel":  "The grapic novel is a journey of Cara and Jack to save a innovative EV invention!",
+    "what is Earthshot": "Earthshot, a non-profit organization, is using video games and immersive experiences as a means to inspire people to take action on climate change.",
     "default": "I'm sorry, I don't understand. I am learning everyday.  This response will help me in my accuracy"
 }
 
