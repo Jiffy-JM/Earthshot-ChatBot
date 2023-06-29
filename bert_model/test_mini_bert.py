@@ -46,64 +46,19 @@ Bob Wyman is the Co-founder and a Board Chair of Earthshot.
 The Earthshot team includes: Nikki Buffa, partner at Latham and Watkins; Manuel Grace, Associate General Counsel at Disney; Jamar Graham, Product Manager at PlayerWON; Lauren Graham, Founder of Velvet Frame; Bruce Garfield, Founder of Garfield Agency; Nikhil Jain, Co-Founder of Oben Inc. and serial entrepeneur; Rob Legato, Triple Academy award winning special effects expert; Ariella Lehrer, CEO of Legacy Games; Kenny Leu, Actor and Entrepeneur; Clayton Munnings, evironmental economist and consultant; Vickie Patton, evnironmental defense Fund's General Counsel; John Preston, Founder of TEM Capital; Jerry Prochazka, CEO at Ganymede Games; Mike Vandenbergh, Professor of Law and Director of Climate Change Research at Vanderbilt University; Sean Watson, Innovation Strategist; Belinda Smith Walker, Founding Board Member of New Villiage Girls Academy;
 '''
 
-'''
-while True:
-    # ask question
-    question = input('\n\nQuestion: ')
-
-    # if question is q then break
-    if question == 'q':
-        break
-    
-    dataset = ''
-    lowerQ = question.lower()
-    # FILTER THE QUESTION FOR KEYWORDS TO CHOOSE DATASET
-    if 'bob' in lowerQ or 'wyman' in lowerQ or 'mark' in lowerQ or 'bernstein' in lowerQ:
-        dataset = bob_and_mark_dataset
-        print('\nbob and mark')
-    elif 'invest' in lowerQ or 'financ' in lowerQ:
-        dataset = investing_dataset
-        print('\ninvesting')
-    elif 'game' in lowerQ or 'gaming' in lowerQ:
-        dataset = gaming_dataset
-        print('\ngaming')
-    else:
-        dataset = default_dataset
-        print('\ndefault')
-    
-    # join lines in set
-    dataset = dataset.split('\n')
-    dataset = " ".join(dataset)
-
-    # Tokenize the question and text
-    inputs = tokenizer.encode_plus(question, dataset, add_special_tokens=True, return_tensors='pt')
-
-    # Perform inference
-    with torch.no_grad():
-        outputs = model(**inputs)
-
-    # get start and end scores
-    start_scores = outputs.start_logits
-    end_scores = outputs.end_logits
-
-    # Get the most probable answer
-    start_index = torch.argmax(start_scores)
-    end_index = torch.argmax(end_scores)
-    all_tokens = tokenizer.convert_ids_to_tokens(inputs['input_ids'].squeeze())
-    answer = ' '.join(all_tokens[start_index: end_index + 1])
-    answer = re.sub(r"##", "", answer)
-
-    
-    print("Answer: ", answer)'''
-
 nlp = spacy.load("en_core_web_sm")
 
 # Define a dictionary of prompts and their corresponding responses
-greetings = {
+prompts = {
     "hello": "Hello there!",
-    "how are you": "I'm doing well, thank you!",
+    "how are you": "I am a model therefore I do not have feelings, but I can provide you with information on Earthshot.  Please ask away.",
     "goodbye": "Goodbye! Have a nice day.",
-    "default": "I'm sorry, I don't understand. Can you please rephrase?"
+    "where is earthshot located": "Earthshot is located in Pasedena California!",
+    "what are the efforts earthshot works on": "Earthshot has many efforts such as a cleantech portal, games, immersive experiences and a podcast.",
+    "what is the cleantech portal":  "Buildings are important because they cause over one-third of global carbon emissions. Here you can find innovations that can help existing and new buildings be more sustainable and achieve net-zero carbon emissions.",
+    "can i support earthshot":  "Yes.  You can support Earthshot by providing a donation or continueing the be conscious of the enviroment.",
+    "what is the grapic novel":  "The grapic novel is a journey of Cara and Jack to save a innovative EV invention!",
+    "default": "I'm sorry, I don't understand. I am learning everyday.  This response will help me in my accuracy"
 }
 
 # Function to generate a response based on user input
@@ -112,12 +67,12 @@ def generate_response(user_input):
     doc = nlp(user_input.lower())
 
     # Check if user input matches any prompt
-    for prompt, response in greetings.items():
+    for prompt, response in prompts.items():
         if prompt in doc.text:
             return response
 
     # If no prompt matches, return the default response
-    return greetings["default"]
+    return prompts["default"]
 
 
 # return the response from the http request
@@ -125,7 +80,7 @@ def get_chatbot_response(question):
 
     response = generate_response(question)
     
-    if response != greetings["default"]:
+    if response != prompts["default"]:
         return response
 
 
@@ -177,13 +132,8 @@ def get_chatbot_response(question):
 
     # Check if the answer is empty or invalid
     if not answer.strip() or len(answer.split()) == 1 or answer.strip() == ".":
-        return greetings["default"]
+        return prompts["default"]
     
-    # Check if the answer starts with undesired patterns
-    undesired_patterns = ["[cls]", "[sep]"]
-    if any(answer.startswith(pattern) for pattern in undesired_patterns):
-        return greetings["default"]
-
     # Format the BERT response with capitalized first letters and sentence-ending periods
     formatted_answer = answer.capitalize()
     formatted_answer = re.sub(r"(\w)([.?!])", r"\1\2 ", formatted_answer)
