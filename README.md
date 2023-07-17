@@ -24,3 +24,8 @@ This library is created and maintained by [Hugging Face](https://huggingface.co/
 ## Usage // Development
 To run the program locally, first you will need to ensure that all of the dependencies above are installed. Next, request a ```trained_model``` folder from a team member and place it within the ```Train_Model``` folder. </br></br>
 Now that all is in order, navigate to the ```example.py``` file in the ```Train_Model``` folder, and run it. </br></br> With this program running, a server will be laucnhed on your computer via Flask. Go to your preferred localhost address (i.e. 127.0.0.1) and there you go! You have successfully launched the chatbot locally and can interact with it in-browser!</br></br>Note: if you are experiencing issues with the local server, ensure that the target port (80) is not in use.
+
+
+
+Install Spacy:
+python -m spacy download en_core_web_sm

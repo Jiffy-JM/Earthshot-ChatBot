@@ -1,5 +1,4 @@
 import torch
-import transformers
 import re
 import spacy
 from transformers import BertTokenizer, BertForQuestionAnswering
