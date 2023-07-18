@@ -49,10 +49,24 @@ body {
     background-color: #fffdfa;
 }
 #injection_section::-webkit-scrollbar-track {
-    background: fffdfa;
+    background: #fffdfa;
 }
    
 #injection_section::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 14px;
+    border: 3px solid #222;
+}
+
+#messageInput::-webkit-scrollbar {
+    width: 8px;
+    background-color: #00000000;
+}
+#messageInput::-webkit-scrollbar-track {
+    background: #00000000;
+}
+   
+#messageInput::-webkit-scrollbar-thumb {
     background: #222;
     border-radius: 14px;
     border: 3px solid #222;
@@ -126,7 +140,8 @@ body {
     outline: 1px solid #00000000;
     border: 1px solid #00000000;
     width: 100%;
-    height: 90%;
+    height: auto;
+    resize:none;
 }
 
 #messageInputLabel {

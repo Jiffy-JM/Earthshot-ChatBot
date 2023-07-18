@@ -57,6 +57,7 @@ prompts = {
     "what is the cleantech portal":  "Buildings are important because they cause over one-third of global carbon emissions. Here you can find innovations that can help existing and new buildings be more sustainable and achieve net-zero carbon emissions.",
     "can i support earthshot":  "Yes.  You can support Earthshot by providing a donation or continueing the be conscious of the enviroment.",
     "what is the graphic novel":  "The grapic novel is a journey of Cara and Jack to save a innovative EV invention!",
+    "what is supercharged": "SuperCharged is a 12-issue comic cross-country adventure, murder mystery and romance that showcases exciting electric vehicle technologies.",
     "what is earthshot": "Earthshot, a non-profit organization, is using video games and immersive experiences as a means to inspire people to take action on climate change.",
     "default": "I'm sorry, I don't understand. I am learning everyday.  This response will help me in my accuracy"
 }
@@ -139,6 +140,10 @@ def get_chatbot_response(question):
     formatted_answer = re.sub(r"(\w)([.?!])", r"\1\2 ", formatted_answer)
     formatted_answer = re.sub(r"\s+", " ", formatted_answer)
     formatted_answer = formatted_answer.strip() + "."
+
+    # check for cls and sep
+    if '[cls]' in formatted_answer or '[sep]' in formatted_answer:
+        return f"I'm sorry, I don't understand. Click the message bubble above to see some questions I can answer for you!"
 
     return formatted_answer
 

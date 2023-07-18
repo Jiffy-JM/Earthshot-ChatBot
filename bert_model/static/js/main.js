@@ -14,6 +14,28 @@ var prompts = document.getElementById('prompts');
 var opened = false;
 
 
+function pickRandomElements(arr, numElements) {
+    // Copy the original array to avoid modifying it
+    const copyArray = [...arr];
+    
+    // Array to store the selected elements
+    const randomElements = [];
+    
+    // Loop to pick random elements
+    for (let i = 0; i < numElements; i++) {
+      // Generate a random index within the remaining array length
+      const randomIndex = Math.floor(Math.random() * copyArray.length);
+      
+      // Retrieve the element at the random index and remove it from the array
+      const selectedElement = copyArray.splice(randomIndex, 1)[0];
+      
+      // Add the selected element to the randomElements array
+      randomElements.push(selectedElement);
+    }
+    
+    return randomElements;
+  }
+
 chatButton.addEventListener('click', async(e) => {
 
     if(opened === false){
@@ -129,27 +151,56 @@ async function addSuggListener(){
         sendMessage.click()
     });
 }
+promptArray = [
+    '<p id="sugg1">What is Earthshot?</p>',
+    '<p id="sugg2">What are the efforts Earthshot works on?</p>',
+    '<p id="sugg3">Where is Earthshot located?</p>',
+    '<p id="sugg4">Can I support Earthshot?</p>',
+    '<p id="sugg5">What is the Cleantech Portal?</p>',
+    '<p id="sugg6">What is Supercharged?</p>',
+]
 
 //bring the suggs back up
 prompts.addEventListener('click', async(e) => {
+    tempRandos = pickRandomElements(promptArray,3);
+    let injectionString
     // clear the seciton
     injectionSection.innerHTML = '';
     // show the suggs
     suggestions.style.display = 'flex';
 
-    //inject the suggs
-    injectionSection.innerHTML = `<div id="suggestions">
-                                    <p id="sugg1">What is Earthshot?</p>
-                                    <p id="sugg2">What are the efforts Earthshot works on?</p>
-                                    <p id="sugg3">Where is Earthshot located?</p>
-                                    <p id="sugg4">Can I support Earthshot?</p>
-                                    <p id="sugg5">What is the Cleantech Portal?</p>
-                                </div>`
+    // inject sugg div header
+    injectionString = `<div id='suggestions'>`
+    // inject the suggs
+    tempRandos.forEach(async o => {
+        injectionString += o;
+    });
+    // inject sugg div footer
+    injectionString += `</div>`
 
-    // remake the event listener for clicking a sugg
-    //click a suggestion
-    addSuggListener();
+    // inject
+    injectionSection.innerHTML = injectionString
+
+    // add listeners for new suggs
+    await addSuggListener();
 });
+
+// inject random elements into the suggestions box on boot
+window.addEventListener('DOMContentLoaded', async(e) => {
+    var tempSuggs = pickRandomElements(promptArray,3);
+    var tempInjection = ''
+    tempSuggs.forEach(async (o) => {
+        tempInjection += o;
+    });
+    document.getElementById('suggestions').innerHTML = tempInjection
+});
+
+// send message on enter
+document.getElementById('messageInput').addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      sendMessage.click();
+    }
+  });
 
 
 // API SECTION // injection 
