@@ -1,43 +1,44 @@
 import spacy
 import json
-import better_profanity
 
-# Load the SpaCy NLP model
+# Load spaCy model (you may need to download the model if not already done)
 nlp = spacy.load("en_core_web_sm")
 
-# Load the JSON dataset
-with open("./prompts.json") as json_file:
-    data = json.load(json_file)
+# Load JSON data
+with open('./prompts.json') as f:
+    data = json.load(f)
 
-# Function to check if a given text contains any profanity
-def contains_profanity(text):
-    return better_profanity.Profanity().contains_profanity(text)
+def process_user_input(user_input, prompts):
+    user_input = user_input.lower()
+    # Check if the user's input matches any predefined prompts
+    for prompt, response in prompts.items():
+        if prompt in user_input:
+            return response
 
-# Function to process user input and return the bot's response
-def get_bot_response(user_input):
-    # Check for profanity in user input
-    if contains_profanity(user_input):
-        return "I'm sorry, but I cannot respond to inappropriate language."
+    # If no match is found, check the categories for more specific responses
+    for category, category_data in data['categories'].items():
+        if category_data is None:
+            continue
 
-    # Process user input using SpaCy NLP model
-    doc = nlp(user_input)
+        keywords = category_data['keywords']
+        for keyword in keywords:
+            if keyword in user_input:
+                return category_data['response']
 
-    # Check if user input contains any of the keywords
-    for token in doc:
-        for section in data.values():
-            if isinstance(section, list):
-                for item in section:
-                    for key, value in item.items():
-                        if isinstance(value, str):
-                            if token.text.lower() in value.lower():
-                                return data["prompts"][token.text.lower()]
+    # If no specific match is found, use the default response
+    return prompts['default']
 
-    # If no keyword match, return a default response
-    return data["prompts"]["default"]
+def main():
+    print("Chatbot: Hello! I'm a chatbot. You can start a conversation. Type 'goodbye' to exit.")
+    while True:
+        user_input = input("You: ").strip()
+        if user_input.lower() == 'goodbye':
+            print("Chatbot: Goodbye! Have a nice day.")
+            break
+        
+        # Process user input and get the response
+        response = process_user_input(user_input, data['prompts'])
+        print("Chatbot:", response)
 
-# Example usage
-user_input = input("You: ")
-while user_input.lower() != "exit":
-    bot_response = get_bot_response(user_input)
-    print("Bot:", bot_response)
-    user_input = input("You: ")
+if __name__ == "__main__":
+    main()
