@@ -10,9 +10,9 @@ To acheive running the training of data and chatbot intance you must create a Do
 ## Dependencies
 To achieve a locally running AI chat model that can be fine-tuned with our own data, it was necessary to utilize the following libraries.
 
-### Boto3 
-To sucessfully train the model and use a compatible S3 object storage see how to install the boto3 library using the following commands
-```pip install boto3```
+Spacy is used as an NLP in order to use the large model run the following command
+
+```python -m spacy download en_core_web_lg```
 
 ### [Flask](https://pypi.org/project/Flask/)
 As a "microframework," Flask allows us to use Python in web development. Flask is a solution for development, and will be replaced with an enterprise level WSGI solution for the production application. 
@@ -25,7 +25,3 @@ This library is created and maintained by [Hugging Face](https://huggingface.co/
 To run the program locally, first you will need to ensure that all of the dependencies above are installed. Next, request a ```trained_model``` folder from a team member and place it within the ```Train_Model``` folder. </br></br>
 Now that all is in order, navigate to the ```example.py``` file in the ```Train_Model``` folder, and run it. </br></br> With this program running, a server will be laucnhed on your computer via Flask. Go to your preferred localhost address (i.e. 127.0.0.1) and there you go! You have successfully launched the chatbot locally and can interact with it in-browser!</br></br>Note: if you are experiencing issues with the local server, ensure that the target port (80) is not in use.
 
-
-
-Install Spacy:
-python -m spacy download en_core_web_sm
