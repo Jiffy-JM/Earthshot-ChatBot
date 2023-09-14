@@ -10,7 +10,6 @@
     {
         "input_text": "Hello",
         "output_text": "Greetings!  I am here to teach you aboout Earthshot feel free to ask any questions."
-
     },
     {
         "input_text": "Hi",
@@ -199,6 +198,288 @@
     {
         "input_text": "What is the reality regarding climate change and its solutions?",
         "output_text": "Contrary to the negative perceptions, climate change is both real and immediate. Most solutions are already available or will be soon, and they are affordable, often costing less than the carbon-intensive technologies they replace. These solutions are positive, exciting, and can enhance life quality, offsetting short-term costs."
+    },
+    {
+        "input_text": "What is Earthshot's primary mission?",
+        "output_text": "Earthshot's primary mission is to inspire action on climate change through innovative communication and interactive experiences."
+    },
+    {
+        "input_text": "Tell me about Earthshot's founder, Bob Wyman.",
+        "output_text": "Bob Wyman is one of the co-founders of Earthshot. He has a background in environmental law and a long history of promoting clean technologies."
+    },
+    {
+        "input_text": "What are the key projects of Earthshot?",
+        "output_text": "Earthshot is involved in various projects, including the Earthshot Fortnite Project, cleantech initiatives, and educational programs."
+    },
+    {
+        "input_text": "How can I get involved with Earthshot's initiatives?",
+        "output_text": "You can get involved with Earthshot by participating in our educational programs, supporting our initiatives, or volunteering your time and skills."
+    },
+    {
+        "input_text": "What is the Earthshot Fortnite Project?",
+        "output_text": "The Earthshot Fortnite Project is centered around the 'Clear Skies' X-Glide racing experience in Fortnite, aimed at raising awareness about clean energy and sustainability."
+    },
+    {
+        "input_text": "Tell me more about the 'Clear Skies' X-Glide project in Fortnite.",
+        "output_text": "In 'Clear Skies' X-Glide, players can race through a wind farm in Fortnite, promoting the use of wind energy. It's an exciting and educational gaming experience."
+    },
+    {
+        "input_text": "What is Earthshot's vision for a sustainable future?",
+        "output_text": "Earthshot envisions a future where clean technologies and sustainable practices are the norm, leading to a healthier planet and improved quality of life for all."
+    },
+    {
+        "input_text": "Tell me about Earthshot's collaboration with gaming companies.",
+        "output_text": "Earthshot collaborates with gaming companies to create engaging experiences that educate players about climate change and sustainability."
+    },
+    {
+        "input_text": "How does Earthshot use immersive experiences to promote its message?",
+        "output_text": "Earthshot leverages immersive experiences, such as virtual reality, to transport users into scenarios where they can witness the positive impacts of clean technologies."
+    },
+    {
+        "input_text": "What is Earthshot's stance on renewable energy?",
+        "output_text": "Earthshot strongly advocates for the adoption of renewable energy sources, such as wind and solar power, to reduce carbon emissions and combat climate change."
+    },
+    {
+        "input_text": "Tell me about Earthshot's podcast.",
+        "output_text": "Earthshot hosts a podcast that features discussions with experts, innovators, and thought leaders in the fields of clean technology and sustainability."
+    },
+    {
+        "input_text": "How can I stay updated on Earthshot's latest initiatives?",
+        "output_text": "You can stay updated on Earthshot's initiatives by following our website, social media channels, and subscribing to our newsletter."
+    },
+    {
+        "input_text": "What are some success stories of Earthshot's impact?",
+        "output_text": "Earthshot has contributed to the adoption of clean technologies in various industries, resulting in reduced carbon emissions and a more sustainable future."
+    },
+    {
+        "input_text": "Tell me about Earthshot's role in promoting climate education.",
+        "output_text": "Earthshot plays a vital role in promoting climate education by developing educational programs and resources that inform and inspire people to take action."
+    },
+    {
+        "input_text": "What is the Cleantech Portal's main purpose?",
+        "output_text": "The Cleantech Portal aims to showcase innovative technologies and solutions that can help reduce carbon emissions in the built environment."
+    },
+    {
+        "input_text": "Tell me about Earthshot's efforts in sustainable transportation.",
+        "output_text": "Earthshot is actively involved in promoting sustainable transportation solutions, including electric vehicles and alternative fuels."
+    },
+    {
+        "input_text": "How can individuals contribute to Earthshot's mission?",
+        "output_text": "Individuals can contribute to Earthshot's mission by adopting sustainable practices in their daily lives, supporting clean technology innovations, and spreading awareness about climate change."
+    },
+    {
+        "input_text": "What is the Earthshot SuperCharged initiative?",
+        "output_text": "Earthshot SuperCharged is an exciting comic series that explores the world of electric vehicles and the future of sustainable transportation."
+    },
+    {
+        "input_text": "Tell me about Earthshot's partnerships with educational institutions.",
+        "output_text": "Earthshot collaborates with educational institutions to develop educational programs that empower students with knowledge about clean technologies and environmental sustainability."
+    },
+    {
+        "input_text": "What are Earthshot's goals for the next decade?",
+        "output_text": "In the next decade, Earthshot aims to accelerate the adoption of clean technologies, reduce carbon emissions, and inspire global action on climate change."
+    },
+    {
+        "input_text": "How does Earthshot use storytelling to convey its message?",
+        "output_text": "Earthshot employs storytelling through various media, such as graphic novels and interactive experiences, to make the concepts of sustainability and clean technology accessible and engaging."
+    },
+    {
+        "input_text": "Tell me about Earthshot's initiatives in the field of green building.",
+        "output_text": "Earthshot is actively involved in promoting green building practices and technologies that make buildings more energy-efficient and environmentally friendly."
+    },
+    {
+        "input_text": "What is Earthshot's approach to renewable energy?",
+        "output_text": "Earthshot focuses on promoting renewable energy solutions like solar and wind power to reduce our reliance on fossil fuels."
+    },
+    {
+        "input_text": "Tell me about Earthshot's involvement in climate policy.",
+        "output_text": "Earthshot actively engages with policymakers to advocate for climate-friendly policies and initiatives at local, national, and global levels."
+    },
+    {
+        "input_text": "How does Earthshot support clean technology startups?",
+        "output_text": "Earthshot provides mentorship, resources, and funding opportunities to promising clean technology startups, helping them bring their innovations to market."
+    },
+    {
+        "input_text": "What is Earthshot's vision for a sustainable future?",
+        "output_text": "Earthshot envisions a future where sustainable technologies and practices are widespread, leading to a healthier planet and improved quality of life for all."
+    },
+    {
+        "input_text": "Tell me about Earthshot's partnerships with environmental organizations.",
+        "output_text": "Earthshot collaborates with environmental organizations to amplify its impact and work together toward a common goal of addressing climate change."
+    },
+    {
+        "input_text": "What educational resources does Earthshot offer to the public?",
+        "output_text": "Earthshot provides educational materials, webinars, and workshops to educate the public about clean technologies and their role in mitigating climate change."
+    },
+    {
+        "input_text": "How can businesses get involved with Earthshot's initiatives?",
+        "output_text": "Businesses can get involved by adopting sustainable practices, supporting Earthshot's projects, and exploring opportunities for collaboration in clean technology."
+    },
+    {
+        "input_text": "What role does innovation play in Earthshot's mission?",
+        "output_text": "Innovation is at the core of Earthshot's mission, as it seeks to drive the development and adoption of innovative technologies that address climate challenges."
+    },
+    {
+        "input_text": "What is Earthshot's primary objective?",
+        "output_text": "Earthshot's primary objective is to use various means, including video games and immersive experiences, to inspire people to take action on climate change."
+    },
+    {
+        "input_text": "Who funds Earthshot?",
+        "output_text": "Earthshot is primarily funded by donations and grants from various individuals and organizations."
+    },
+    {
+        "input_text": "Are there any job opportunities at Earthshot?",
+        "output_text": "Please visit the Earthshot website for the most current job opportunities."
+    },
+    {
+        "input_text": "Can I volunteer at Earthshot?",
+        "output_text": "Yes, there are many volunteer opportunities at Earthshot. Please check our website for more information."
+    },
+    {
+        "input_text": "Can I visit Earthshot's office?",
+        "output_text": "Please contact us through our website to arrange a visit to our office."
+    },
+    {
+        "input_text": "How can I stay updated with Earthshot's initiatives?",
+        "output_text": "You can follow us on social media and subscribe to our newsletter to stay updated with our initiatives."
+    },
+    {
+        "input_text": "Tell me more about the video games Earthshot is developing.",
+        "output_text": "Earthshot is currently developing a variety of educational and interactive video games centered around environmental themes."
+    },
+    {
+        "input_text": "How does Earthshot measure its impact?",
+        "output_text": "Earthshot's impact is measured through a range of parameters, such as the number of people educated, the amount of funds raised, and the carbon footprint reduced."
+    },
+    {
+        "input_text": "What kind of immersive experiences does Earthshot provide?",
+        "output_text": "Earthshot provides immersive experiences through its educational video games and virtual reality simulations, all designed to raise awareness about climate change."
+    },
+    {
+        "input_text": "What are some of Earthshot's upcoming initiatives?",
+        "output_text": "Please visit our website or subscribe to our newsletter to get the latest updates on Earthshot's upcoming initiatives."
+    },
+    {
+        "input_text": "Are Earthshot's initiatives child-friendly?",
+        "output_text": "Yes, many of Earthshot's initiatives, including our video games and immersive experiences, are designed to be child-friendly."
+    },
+    {
+        "input_text": "What age group is Earthshot's initiatives targeted at?",
+        "output_text": "Earthshot's initiatives are designed to engage all age groups. Everyone from children to adults can participate and benefit from our programs."
+    },
+    {
+        "input_text": "What is Earthshot's vision?",
+        "output_text": "Earthshot's vision is a world where everyone is inspired and equipped to take action on climate change."
+    },
+    {
+        "input_text": "Who founded Earthshot?",
+        "output_text": "Earthshot was founded by a group of passionate individuals dedicated to tackling climate change."
+    },
+    {
+        "input_text": "Is there an Earthshot mobile app?",
+        "output_text": "There's currently no Earthshot mobile app. But you can access our resources via our website."
+    },
+    {
+        "input_text": "What inspired the creation of Earthshot?",
+        "output_text": "The urgent need to combat climate change and make sustainability education widely accessible inspired the creation of Earthshot."
+    },
+    {
+        "input_text": "Does Earthshot collaborate with other organizations?",
+        "output_text": "Yes, Earthshot often partners with other organizations that share our commitment to combating climate change."
+    },
+    {
+        "input_text": "Does Earthshot accept corporate sponsorships for its initiatives?",
+        "output_text": "Yes, Earthshot is open to corporate sponsorships that are aligned with our mission and values. Please contact us for more information."
+    },
+    {
+        "input_text": "I'd like to give a feedback. Where can I do that?",
+        "output_text": "Thanks for your willingness to give feedback! Please submit it through the 'Contact Us' section on our website."
+    },
+    {
+        "input_text": "I have some great ideas for Earthshot. How can I share them?",
+        "output_text": "We would love to hear your ideas! Feel free to share them using the 'Contact Us' form on our website."
+    },
+    {
+        "input_text": "What's the practical application of Earthshot's initiatives?",
+        "output_text": "Earthshot's initiatives aim to educate and inspire action against climate change. This has applications in environmental protection, scientific education, and community awareness."
+    },
+    {
+        "input_text": "Where does Earthshot source its data?",
+        "output_text": "Earthshot collaborates with scientific researchers, climate experts and draws from established climate data sources to ensure accuracy and dependability."
+    },
+    {
+        "input_text": "What's the reception been like for Earthshot's initiatives?",
+        "output_text": "Earthshot's initiatives have been well received by educators, learners, and the environmentally conscious community worldwide."
+    },
+    {
+        "input_text": "Does Earthshot have any interactive initiatives?",
+        "output_text": "Yes, Earthshot uses immersive video games as a platform to inspire and educate about climate change in an engaging way."
+    },
+    {
+        "input_text": "Are Earthshot's initiatives accessible internationally?",
+        "output_text": "Yes, Earthshot's initiatives can be accessed globally through our online platforms."
+    },
+    {
+        "input_text": "What motivates Earthshot's initiatives?",
+        "output_text": "Earthshot is driven by the urgent need to combat climate change and the goal to make sustainability education accessible to all."
+    },
+    {
+        "input_text": "Does Earthshot partner with schools?",
+        "output_text": "Yes, Earthshot partners with schools to integrate environmental education and promote sustainability practices."
+    },
+    {
+        "input_text": "Do you have to be a scientist to understand Earthshot's content?",
+        "output_text": "No, Earthshot's content is designed to be user-friendly and accessible to all, regardless of scientific knowledge."
+    },
+    {
+        "input_text": "How can I learn more about climate change through Earthshot?",
+        "output_text": "You can learn more about climate change through Earthshot's initiatives, which include games, immersive experiences, and educational content."
+    },
+    {
+        "input_text": "How does Earthshot ensure the accuracy of information?",
+        "output_text": "Earthshot meticulously sources information from trusted scientific and environmental research to ensure accuracy."
+    },
+    {
+        "input_text": "What is the impact of Earthshot's immersive experiences?",
+        "output_text": "Earthshot's immersive experiences offer a unique way to engage audiences about climate change. They prompt learners to think critically about ecological issues and empower them to take informed action."
+    },
+    {
+        "input_text": "How are Earthshot's games designed?",
+        "output_text": "Earthshot's games are designed by a team of expert game designers and developers, with input from environmental scientists, to create engaging and informative experiences."
+    },
+    {
+        "input_text": "Does Earthshot offer any resources for educators?",
+        "output_text": "Yes, Earthshot offers a range of resources for educators. These include supportive materials for our games and immersive experiences as well as standalone educational content."
+    },
+    {
+        "input_text": "What can individuals do to support Earthshot?",
+        "output_text": "Individuals can support Earthshot in many ways, from donations and volunteer work to simply sharing our initiatives with their networks."
+    },
+    {
+        "input_text": "How frequently does Earthshot update its content?",
+        "output_text": "Earthshot consistently updates its content to ensure it reflects the latest in climate science and technology."
+    },
+    {
+        "input_text": "Who are Earthshot's initiatives aimed at?",
+        "output_text": "Earthshot's initiatives aim to reach as broad an audience as possible, from students and educators to policy makers and the general public."
+    },
+    {
+        "input_text": "How does Earthshot select its initiatives?",
+        "output_text": "Earthshot selects its initiatives based on rigourous scientific findings, urgent environmental needs, and its potential for educational impact."
+    },
+    {
+        "input_text": "What was the first initiative Earthshot worked on?",
+        "output_text": "Earthshot's first initiative was leveraging video games and immersive experiences to educate and inspire action on climate change."
+    },
+    {
+        "input_text": "What has been Earthshot's most successful initiative so far?",
+        "output_text": "While success can be defined in various ways, Earthshot's use of games and immersive experiences has been particularly impactful in raising awareness and inspiring action."
+    },
+    {
+        "input_text": "What's next for Earthshot?",
+        "output_text": "Earthshot will continue developing innovative initiatives that inspire and educate about climate change. Stay tuned to our website and social media channels for the latest updates."
     }
-
 ]
+
+
+
