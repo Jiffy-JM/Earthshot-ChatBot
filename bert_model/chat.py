@@ -13,11 +13,12 @@ with open("./data.json", "r") as file:
 selected_prompts = []
 
 # Variable to store the user's context
-user_context = None
 
+def retQA():
+    return qa_pairs
 # Function to retrieve a random input prompt and its corresponding output text
 def get_random_prompt():
-    global user_context
+   
     relevant_prompts = []
 
     if user_context:
@@ -40,7 +41,7 @@ def get_random_prompt():
 
 # Function to reset the chat session
 def reset_chat_session():
-    global user_context
+  
     user_context = None
     # Clear the list of selected prompts and restore all prompts to the available list
     qa_pairs.extend(selected_prompts)
@@ -54,10 +55,10 @@ def get_responses(input_text):
     # Get associated output for the input
     output_text = None
     for qa_pair in qa_pairs:
-        if qa_pair["input_text"] == input_text:
+        if input_text.lower().strip() in qa_pair["input_text"].lower():
             output_text = qa_pair["output_text"]
             break
-
+    
     if output_text is None:
         output_text = "I'm sorry, I don't have a response for that."
 
@@ -67,5 +68,5 @@ def get_responses(input_text):
     print(output_text, additional_responses)
     return output_text, additional_responses
 
-
-get_responses('How does Earthshot ensure the accuracy of information?')
+# sample usage
+# get_responses('How does Earthshot ensure the accuracy of information?')

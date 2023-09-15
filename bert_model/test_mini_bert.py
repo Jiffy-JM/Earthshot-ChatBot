@@ -2,8 +2,9 @@ import torch
 import re
 import spacy
 from transformers import BertTokenizer, BertForQuestionAnswering
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, after_this_request
 from flask_cors import CORS
+from chat import get_responses, retQA
 
 # Load the pre-trained BERT model and tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
@@ -160,15 +161,29 @@ def process_request():
     if(request.method == 'POST'):
 
         data = request.json
-
-        #process input
-        chatbot_res = {'message' : get_chatbot_response(data)}
-
-        return jsonify(chatbot_res)
+        responses = get_responses(str(data.strip()))
+        @after_this_request
+        def respondToUser(response):
+            #process input
+            NLP_response = responses[0]
+            chatRes_text = ''
+            if(NLP_response == "I'm sorry, I don't have a response for that."):
+                chatRes_text = get_chatbot_response(data.strip())
+                chatbot_res = {'message' : chatRes_text,
+                                'responses':responses[1]}
+            else:
+                chatbot_res = {'message' : responses[0],
+                                'responses':responses[1]}
+            print(chatbot_res)
+            return jsonify(chatbot_res)
     
     return 'method not allowed', 405
 
-    
+@app.route('/get-QA-Pairs', methods=['GET'])
+def getQA_Pairs():
+    ret = (retQA())
+    print(ret)
+    return jsonify({"message":ret})
 
 if __name__ == '__main__':
-    app.run(debug=True,host="0.0.0.0",port="8000")
+    app.run(debug=True,host="0.0.0.0",port="8000", use_reloader=False)
