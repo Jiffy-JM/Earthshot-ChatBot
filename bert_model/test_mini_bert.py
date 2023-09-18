@@ -100,9 +100,6 @@ def get_chatbot_response(question):
     elif 'game' in lowerQ or 'gaming' in lowerQ or 'green city' in lowerQ or 'electro ave' in lowerQ or 'develop' in lowerQ:
         dataset = gaming_dataset
         print('\ngaming')
-    elif 'team' in lowerQ or 'president' in lowerQ or 'co-' in lowerQ:
-        dataset = team_dataset
-        print('\nteam')
     else:
         dataset = default_dataset
         print('\ndefault')
